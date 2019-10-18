@@ -72,12 +72,10 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-for (let loop = 0; loop < graduates.length; loop++) {
-  universities.push(graduates[loop].university);
-}
-let universitiesSorted = [];
-universities.sort().push;
+const universities = graduates.forEach(function (items) {
+  return items.university;
+});
+
 
 console.log(universities);
 
@@ -95,18 +93,10 @@ graduates.forEach(function (items) {
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
-// graduates.forEach(function (items) {
-//   return unisWithUni.push(`${items.university}`);
-// });
-for (let loop = 0; loop < graduates.length; loop++) {
-  if (
-    graduates[loop].university === 'Uni'
-  ) {
-    unisWithUni.push(graduates[loop]);
-  }
+const unisWithUni = graduates.filter(function (items) {
+  return items.university === 'Uni';
+});
 
-}
 console.log(unisWithUni);
 
 
